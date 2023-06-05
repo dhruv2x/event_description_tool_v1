@@ -72,7 +72,7 @@ class _ChatGPTPageState extends State<ChatGPTPage> {
     venue.clear();
     speaker.clear();
     category.clear();
-    additional.clear;
+    additional.clear();
     price.clear();
 
     sendMessageToChatGpt(message).then((response) {
