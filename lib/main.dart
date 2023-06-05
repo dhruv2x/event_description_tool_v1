@@ -31,7 +31,7 @@ class _ChatGPTPageState extends State<ChatGPTPage> {
         {"role": "system", "content": "You are a user."},
         {"role": "user", "content": message}
       ],
-      "max_tokens": 250,
+      "max_tokens": 350,
     };
 
     final response = await http.post(
