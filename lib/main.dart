@@ -15,6 +15,8 @@ class _ChatGPTPageState extends State<ChatGPTPage> {
   final TextEditingController venue = TextEditingController();
   final TextEditingController speaker = TextEditingController();
   final TextEditingController category = TextEditingController();
+  final TextEditingController additional = TextEditingController();
+  final TextEditingController price = TextEditingController();
   String _response = '';
   String apiKey = '';
   Future<String> sendMessageToChatGpt(String message) async {
@@ -61,13 +63,17 @@ class _ChatGPTPageState extends State<ChatGPTPage> {
 "Time :"+time.text.trim()+
 "Location:"+venue.text.trim()+
 "Key-Speaker :"+speaker.text.trim()+
-"Category : "+date.text.trim();
+"Category : "+date.text.trim()+
+"Ticket Price : "+price.text.trim()+
+"Additional Information : "+additional.text.trim();
     name.clear();
     date.clear();
     time.clear();
     venue.clear();
     speaker.clear();
     category.clear();
+    additional.clear;
+    price.clear();
 
     sendMessageToChatGpt(message).then((response) {
      
@@ -138,6 +144,15 @@ class _ChatGPTPageState extends State<ChatGPTPage> {
                     hintText: 'Enter Key Speaker/Performer...',
                   ),
                 ),
+
+                //price
+
+                TextField(
+                  controller: price,
+                  decoration: InputDecoration(
+                    hintText: 'Enter Event Ticket Price...',
+                  ),
+                ),
       
                 //Category
                 TextField(
@@ -146,6 +161,15 @@ class _ChatGPTPageState extends State<ChatGPTPage> {
                     hintText: 'Enter Event Category...',
                   ),
                 ),
+
+                //Additional Details
+                TextField(
+                  controller: additional,
+                  decoration: InputDecoration(
+                    hintText: 'Enter Additional Details...',
+                  ),
+                ),
+                
       
                  SizedBox(height: 20),
           //Button
