@@ -87,7 +87,7 @@ class _ChatGPTPageState extends State<ChatGPTPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AllEvents.in'),
+        title: Text('Event Description Generator'),
       ),
       body: SingleChildScrollView(
         child: Column(
