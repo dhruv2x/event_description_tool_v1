@@ -57,7 +57,7 @@ class _ChatGPTPageState extends State<ChatGPTPage> {
      setState(() {
         apiKey = apikey_controller.text.trim();
       });
-    String message = "I’m event organizer and you are a creative writer. You have to write creative event description for me. Here are the details of event."+
+    String message = "I’m event organizer and you are a creative writer. You have to write creative event description for me. Make sure to add SEO friendly words. Here are the details of event."+
 "Name of event:  "+name.text.trim()+
 "Date :"+date.text.trim()+
 "Time :"+time.text.trim()+
