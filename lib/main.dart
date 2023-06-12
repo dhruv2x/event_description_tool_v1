@@ -48,7 +48,6 @@ class _ChatGPTPageState extends State<ChatGPTPage> {
     Map<String, dynamic> parsedResponse = json.decode(response.body);
 
     String reply = parsedResponse['choices'][0]['message']['content'];
-
     return reply;
   }
 
